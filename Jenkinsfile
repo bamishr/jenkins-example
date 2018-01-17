@@ -6,7 +6,7 @@ pipeline {
 
             steps {
                  
-                    sh 'mvn clean compile'
+                    sh \"'${M2_HOME}/bin/mvn' -Dmaven.test.failure.ignore clean package\"\n"
 					sh '''
                     echo "PATH = ${PATH}"
                     echo "M2_HOME = ${M2_HOME}"
