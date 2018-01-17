@@ -7,10 +7,7 @@ pipeline {
             steps {
                  
                     sh "'${M2_HOME}/bin/mvn' -Dmaven.test.failure.ignore clean package\"\n"
-					sh '''
-                    echo "PATH = ${PATH}"
-                    echo "M2_HOME = ${M2_HOME}"
-                '''
+					
                 
             }
         }
@@ -19,7 +16,7 @@ pipeline {
 
             steps {
                 
-                    sh 'mvn test'
+                    echo "sh 'mvn test'"
                 
             }
         }
@@ -28,7 +25,7 @@ pipeline {
         stage ('Deployment Stage') {
             steps {
                
-                    sh 'mvn deploy'
+                    echo "sh 'mvn deploy'"
                 
             }
         }
