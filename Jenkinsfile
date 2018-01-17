@@ -6,7 +6,7 @@ pipeline {
 
             steps {
                  
-                    sh "'${M2_HOME}/bin/mvn' -Dmaven.test.failure.ignore clean package\"\n"
+                    bat "'${M2_HOME}/bin/mvn' -Dmaven.test.failure.ignore clean package\"\n"
 					
                 
             }
