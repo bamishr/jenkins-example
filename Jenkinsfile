@@ -5,7 +5,7 @@ pipeline {
         stage ('Compile Stage') {
 
             steps {
-                withMaven(maven : 'C:/Program Files (x86)/apache-maven-3.2.5') {
+                withMaven(maven : 'maven_3_2_5') {
                     sh 'mvn clean compile'
                 }
             }
@@ -14,7 +14,7 @@ pipeline {
         stage ('Testing Stage') {
 
             steps {
-                withMaven(maven : 'C:/Program Files (x86)/apache-maven-3.2.5') {
+                withMaven(maven : 'maven_3_2_5') {
                     sh 'mvn test'
                 }
             }
@@ -23,7 +23,7 @@ pipeline {
 
         stage ('Deployment Stage') {
             steps {
-                withMaven(maven : 'C:/Program Files (x86)/apache-maven-3.2.5') {
+                withMaven(maven : 'maven_3_2_5') {
                     sh 'mvn deploy'
                 }
             }
