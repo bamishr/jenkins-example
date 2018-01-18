@@ -7,7 +7,7 @@ pipeline {
             steps {
                  
                     echo "sh 'mvn test'"
-					
+					bat 'mvn clean compile'
                 
             }
         }
