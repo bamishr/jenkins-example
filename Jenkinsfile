@@ -8,7 +8,6 @@ pipeline {
             steps {
                  
                     echo "sh 'mvn test'"
-					env.JAVA_HOME = tool 'JDK-1.8.0_151'
 					bat 'mvn clean compile'
                 
             }
