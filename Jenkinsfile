@@ -27,7 +27,7 @@ pipeline {
             steps {
                
                     echo "sh 'mvn deploy'"
-                    bat 'mvn deploy'
+                    bat 'mvn install'
             }
         }
     }
