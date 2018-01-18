@@ -18,7 +18,7 @@ pipeline {
             steps {
                 
                     echo "sh 'mvn test'"
-                
+                    bat 'mvn test'
             }
         }
 
@@ -27,7 +27,7 @@ pipeline {
             steps {
                
                     echo "sh 'mvn deploy'"
-                
+                    bat 'mvn deploy'
             }
         }
     }
