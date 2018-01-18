@@ -1,11 +1,6 @@
 pipeline {
     agent any
-node {
-  
-  def mvnHome = tool 'M3'
-  env.JAVA_HOME = tool 'JDK-1.8.0_151'
-  bat "\"${mvnHome}\"\\bin\\mvn -B verify"
-}
+
 	
     stages {
         stage ('Compile Stage') {
@@ -13,6 +8,7 @@ node {
             steps {
                  
                     echo "sh 'mvn test'"
+					env.JAVA_HOME = tool 'JDK-1.8.0_151'
 					bat 'mvn clean compile'
                 
             }
