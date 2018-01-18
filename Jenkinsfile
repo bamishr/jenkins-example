@@ -29,5 +29,25 @@ pipeline {
                 
             }
         }
+		stages {
+        stage ('Integration Stage') {
+
+            steps {
+                 
+                    echo "sh 'mvn test'"
+					
+                
+            }
+        }
+		stages {
+        stage ('Promotion Stage') {
+
+            steps {
+                 
+                    echo "sh 'mvn test'"
+					
+                
+            }
+        }
     }
 }
